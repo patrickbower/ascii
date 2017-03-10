@@ -1,0 +1,9 @@
+.parent {
+  background: #fecb00;
+  color: #999;
+  display: flex;
+}
+
+.child {
+  flex-direction: row;
+}

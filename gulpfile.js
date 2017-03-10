@@ -1,7 +1,6 @@
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var pump = require('pump');
-var uglify = require('gulp-uglify');
+// css
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('styles', function(){
   gulp.src('css/styles.css')
@@ -9,15 +8,25 @@ gulp.task('styles', function(){
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('scripts', function (cb) {
-  pump([
-    gulp.src('js/*.js'),
-    uglify(),
-    gulp.dest('build')
-  ], cb);
-});
-
 gulp.task('watch', function(){
   gulp.watch('css/styles.css', ['styles']);
-  gulp.watch('js/scripts.js', ['scripts']);
+});
+
+// js
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
+var uglify = require('gulp-uglify');
+
+gulp.task('scripts', function () {
+    var bundler = browserify('./js/scripts.js');
+    bundler.transform("babelify", {presets: ["es2015"]});
+
+    bundler.bundle()
+        .on('error', function (err) { console.error(err); })
+        .pipe(source('build/scripts.js'))
+        .pipe(buffer())
+        .pipe(uglify()) // Use any gulp plugins you want now
+        .pipe(gulp.dest('build'));
 });

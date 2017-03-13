@@ -18,6 +18,9 @@
   "homepage": "https://github.com/patrickbower/ascii#readme",
   "devDependencies": {
     "css-loader": "^0.27.2",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.3",

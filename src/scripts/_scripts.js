@@ -1,2 +1,2 @@
-require('./hello');
-require('./world');
+require('./init');
+require('./slider');

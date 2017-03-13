@@ -6,7 +6,7 @@ module.exports = {
     sass: './src/styles/_styles'
   },
   output: {
-      filename: './dst/[].js'
+      filename: './dst/[name].js'
   },
   module: {
     loaders: [

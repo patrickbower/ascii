@@ -6,19 +6,21 @@ $color-4: #cd45d1;
 $color-5: #d1458f;
 $color-6: #d14549;
 
+$font-primary: 'Pathway Gothic One', sans-serif;
+$font-secondary: 'Cardo', serif;
+
 body {
   background: $color-1;
   color: $color-0;
   display: flex;
   justify-content: center;
+  font-family: $font-primary;
 }
 
-.container {
-  max-width: 900px;
-  display: flex;
-  background: $color-2;
+p {
+  font-family: $font-secondary;
 }
 
-.char {
-  font-size: 50em;
+a:hover {
+  cursor: pointer;
 }

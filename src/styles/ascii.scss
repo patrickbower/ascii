@@ -1,0 +1,29 @@
+.ascii {
+
+  &__char{
+    font-size: 20em;
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 5em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  &__type {
+    font-size: 1em;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  &__code {
+    font-size: 2em;
+
+    &:before {
+      content: '';
+      color: $color-1;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "ascii",
+  "version": "1.0.0",
+  "description": "ascii is cool",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickbower/ascii.git"
+  },
+  "author": "Patrick Bower",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrickbower/ascii/issues"
+  },
+  "homepage": "https://github.com/patrickbower/ascii#readme",
+  "devDependencies": {
+    "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0"
+  }
+}
